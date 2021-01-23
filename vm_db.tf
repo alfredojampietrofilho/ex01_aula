@@ -24,7 +24,7 @@ resource "azurerm_linux_virtual_machine" "vmDB" {
     disable_password_authentication = false
 
     boot_diagnostics {
-        storage_account_uri = azurerm_storage_account.stDB.primary_blob_endpoint
+        storage_account_uri = azurerm_storage_account.stdb.primary_blob_endpoint
     }
 
 }

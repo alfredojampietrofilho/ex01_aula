@@ -9,7 +9,7 @@ resource "null_resource" "deploy_db" {
             type    =   "ssh"
             user    =   "alfredo"
             password =  "@Alfredo2021"
-            host    = data.azurerm_public_ip.data.azure.publicip_DB.ip_address
+            host    = data.azurerm_public_ip.publicip_db.ip_address
         }
 
         source      = "mysql"
@@ -29,7 +29,7 @@ resource "null_resource" "setup_database" {
             type    =   "ssh"
             user    =   "alfredo"
             password =  "@Alfredo2021"
-            host    = data.azurerm_public_ip.data.azurerm.publicip_DB.ip_address
+            host    = data.azurerm_public_ip.publicip_db.ip_address
         }
 
         inline = [
